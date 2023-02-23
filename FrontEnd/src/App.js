@@ -1,13 +1,19 @@
 import React from 'react';
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 
-function App() {
+import Login from './Components/Login';
+import Home from './Container/Home';
+
+                                      
+
+const App = () =>{
 	return (
-		
-	<h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+	
+		<Routes>
+			<Route path="login" element={<Login/>}/>
+			<Route exact path="/*" element={<Home/>}/>
+		</Routes>
 	);
 }
 
